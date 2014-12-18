@@ -1,0 +1,17 @@
+Project 1 README
+
+Name: Paramvir "Paul" Hundal
+Student ID: 20259202
+
+Description of Project:
+
+The purpose of project one is to build a data structure that takes in a file or directory and outputs the path of which file it is located
+in and what locations in that file we can find each individual word. The way I designed my project was by starting off by traversing
+files or directories. Specifically, the directory traverse class checks to see if the input is a file or directory, and gets its absolute path.
+Further, it also recursively breaks down directories in to a list of files until there is a file with a ".txt" extension to read. At this point
+I pass each file on to my file processor. This class reads in the file line by line using a buffered reader. While I read in each line I keep
+track of each word in side that file by keeping a position counter. Before passing each of these words on to my inverted index, I clean
+up my files. Specifically, the extra white space is trimmed off, made case sensitive, and cut off word by word. Lastly, I designed the
+data structure by building a Tree map with a nested Tree map inside with a nested Array List inside that as my value of positions.
+The data structure was my choice because the tree keeps my positions and words and files in sorted order. Lastly, I used buffered
+writer to print this map out to a file.
